@@ -1,10 +1,46 @@
-For running:
-1) make
-2) run ./minishell (takes no arguments)
+# MiniShell
 
-Builtins Available:
-env --> print a list of environment variables. (No options or arguments)
-echo --> display a line of text (option -n --> do not output the trailing newline)
-pwd --> show current working directory (No options or arguments)
-cd --> change working directory (cd --, cd -, cd ,cd PATH) (No options)
+MiniShell is a simple shell implementation created as part of the School 42 curriculum. It aims to provide a basic command-line interface with essential functionalities.
 
+## Features
+
+- Basic shell prompt
+- Command execution
+- Built-in commands
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/yourusername/MiniShell.git
+    cd MiniShell
+    ```
+
+2. Compile the project:
+
+    ```bash
+    make
+    ```
+
+### Usage
+
+After compilation, you can run MiniShell with:
+
+```bash
+./MiniShell
+Built-in Commands
+
+	•	ENV: Displays the environment variables.
+	•	CD: Changes the current directory. Usage: cd [directory].
+	•	PWD: Prints the current working directory.
+	•	EXPORT: Sets environment variables. Usage: export KEY=VALUE. | export KEY+=VALUE | export
+	•	UNSET: Unsets environment variables. Usage: unset KEY.
+	•	EXIT: Exits the MiniShell.
+	•	ECHO: Displays a line of text. Usage: echo [text]. | echo -n [text]
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+Feel free to adjust any sections as needed. If you provide your GitHub username, I can include it in the clone URL.
