@@ -1,6 +1,6 @@
 For running:
 1) make
-2) run executable (takes no arguments)
+2) run ./minishell (takes no arguments)
 
 Builtins Available:
 env --> print a list of environment variables. (No options or arguments)
