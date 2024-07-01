@@ -1,0 +1,10 @@
+For running:
+1) make
+2) run executable (takes no arguments)
+
+Builtins Available:
+env --> print a list of environment variables. (No options or arguments)
+echo --> display a line of text (option -n --> do not output the trailing newline)
+pwd --> show current working directory (No options or arguments)
+cd --> change working directory (cd --, cd -, cd ,cd PATH) (No options)
+
