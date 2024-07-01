@@ -15,7 +15,7 @@ MiniShell is a simple shell implementation created as part of the School 42 curr
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/MiniShell.git
+    git clone git@github.com:francuza9/Minishell.git
     cd MiniShell
     ```
 
