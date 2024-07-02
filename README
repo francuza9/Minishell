@@ -31,6 +31,8 @@ After compilation, you can run MiniShell with:
 
 ```bash
 ./MiniShell
+```
+
 Built-in Commands
 
 	•	ENV: Displays the environment variables.
@@ -40,5 +42,3 @@ Built-in Commands
 	•	UNSET: Unsets environment variables. Usage: unset KEY.
 	•	EXIT: Exits the MiniShell.
 	•	ECHO: Displays a line of text. Usage: echo [text]. | echo -n [text]
-
-Contributions are welcome! Please feel free to submit a Pull Request.
