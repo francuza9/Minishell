@@ -1,44 +1,30 @@
-# MiniShell
+# Minishell
 
-MiniShell is a simple shell implementation created as part of the School 42 curriculum. It aims to provide a basic command-line interface with essential functionalities.
+A small Unix shell in C, modelled on bash. École 42 project.
 
 ## Features
 
-- Basic shell prompt
-- Command execution
-- Built-in commands
+- An interactive prompt with command history (GNU Readline)
+- Runs programs found through `PATH`, or by relative and absolute path
+- Pipes: `ls -l | grep .c | wc -l`
+- Redirections: `<`, `>`, `>>` and heredoc `<<`
+- Single and double quotes, with bash's rules for each
+- Environment variables (`$HOME`) and the last exit status (`$?`)
+- Built-ins: `echo -n`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`
+- Signals like bash: `Ctrl-C` gives a new prompt, `Ctrl-D` exits, `Ctrl-\` does nothing
 
-## Getting Started
+## What it took
 
-### Installation
+- A lexer and parser that turn a command line into commands, arguments and redirections, with quotes and variable expansion
+- Process management: `fork`, `execve`, `waitpid` and exit statuses
+- File descriptors: `pipe`, `dup2` and closing every descriptor in every process
+- Signal handling that behaves differently in the prompt, in a heredoc and in a running child
+- Matching bash's behaviour and error messages on edge cases
+- Manual memory management in C with no leaks
 
-1. Clone the repository:
-
-    ```bash
-    git clone git@github.com:francuza9/Minishell.git
-    cd MiniShell
-    ```
-
-2. Compile the project:
-
-    ```bash
-    make
-    ```
-
-### Usage
-
-After compilation, you can run MiniShell with:
+## Running it
 
 ```bash
-./MiniShell
+make
+./minishell
 ```
-
-Built-in Commands
-
-	•	ENV: Displays the environment variables.
-	•	CD: Changes the current directory. Usage: cd [directory].
-	•	PWD: Prints the current working directory.
-	•	EXPORT: Sets environment variables. Usage: export KEY=VALUE. | export KEY+=VALUE | export
-	•	UNSET: Unsets environment variables. Usage: unset KEY.
-	•	EXIT: Exits the MiniShell.
-	•	ECHO: Displays a line of text. Usage: echo [text]. | echo -n [text]
