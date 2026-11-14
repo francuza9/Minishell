@@ -65,7 +65,7 @@ comp_start:
 	@$(LIBFT)
 
 ft_minishell: $(OBJS)
-	@$(CC) $(CFLAGS) $(FLAGS) $(OBJS) $(LIB) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIB) $(FLAGS) -o $(NAME)
 
 clean:
 	@rm -rf $(OBJS)

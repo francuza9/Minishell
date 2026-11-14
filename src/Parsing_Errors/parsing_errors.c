@@ -98,10 +98,8 @@ int	syntax_errors(t_data *data, char *str)
 int	initial_parsing(t_data *data)
 {
 	char	*trimmed;
-	int		i;
 	int		exit_stat;
 
-	i = 0;
 	if (check_open_quotes(data->line) == -1)
 		return (2);
 	trimmed = ft_strtrim(data->line, " \t\n\v\f\r");
